@@ -1,6 +1,20 @@
 import tkinter
 from tkinter import ttk
 from datetime import date
+from tkinter import messagebox
+import tkinter.messagebox
+
+def add_contact():
+    firstname = first_name_entry.get()
+    lastname = last_name_entry.get()
+    relation = relation_combobox.get()
+    fiscal = reg_status_var.get()
+    moneyamount = moneyamount_spinbox.get()
+
+    fullname_added = firstname + " " + lastname  + " Added!"
+
+    tkinter.messagebox.showinfo(title="Contact Status", message=fullname_added)
+
 
 window = tkinter.Tk()
 window.title("Contact List")
@@ -40,7 +54,12 @@ for widget in user_info_frame.winfo_children():
 money_frame = tkinter.LabelFrame(frame)
 money_frame.grid(row=1, column=0, sticky="news", padx=20, pady=10)
 fiscal_label = tkinter.Label(money_frame, text="Fiscal Status")
-registered_check = tkinter.Checkbutton(money_frame, text="Owes You Money")
+
+reg_status_var = tkinter.StringVar(value="Debt-free")
+registered_check = tkinter.Checkbutton(money_frame, text="You owe Money",
+                                        variable=reg_status_var, onvalue="Debt",
+                                        offvalue= "Debt-free")
+
 fiscal_label.grid(row=0, column=0)
 registered_check.grid(row=1, column=0)
 
@@ -62,9 +81,13 @@ notes_text.grid(row=1, column=1)
 
 for widget in notes_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
-#figure out horoscope 
 
-button = tkinter.Button(frame, text="Add Contact")
+button = tkinter.Button(frame, text="Add Contact", command= add_contact)
 button.grid(row=3, column=0, sticky="news", padx=20, pady=10)
+
+
+
+
+
 
 window.mainloop()
