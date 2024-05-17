@@ -36,20 +36,20 @@ age_entry.grid(row=3, column=0)
 for widget in user_info_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
 
-#saving Course Info
-courses_frame = tkinter.LabelFrame(frame)
-courses_frame.grid(row=1, column=0, sticky="news", padx=20, pady=10)
-registered_label = tkinter.Label(courses_frame, text="Fiscal Status")
-registered_check = tkinter.Checkbutton(courses_frame, text="Owes You Money")
-registered_label.grid(row=0, column=0)
+#saving money related Info
+money_frame = tkinter.LabelFrame(frame)
+money_frame.grid(row=1, column=0, sticky="news", padx=20, pady=10)
+fiscal_label = tkinter.Label(money_frame, text="Fiscal Status")
+registered_check = tkinter.Checkbutton(money_frame, text="Owes You Money")
+fiscal_label.grid(row=0, column=0)
 registered_check.grid(row=1, column=0)
 
-moneyamount_label = tkinter.Label(courses_frame, text="Amount owed in $")
-moneyamount_spinbox = tkinter.Spinbox(courses_frame, from_=0, to=5000000000)
+moneyamount_label = tkinter.Label(money_frame, text="Amount owed in $")
+moneyamount_spinbox = tkinter.Spinbox(money_frame, from_=0, to=5000000000)
 moneyamount_label.grid(row=0, column=1)
 moneyamount_spinbox.grid(row=1, column=1)
 
-for widget in courses_frame.winfo_children():
+for widget in money_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
 
 notes_frame = tkinter.LabelFrame(frame)
