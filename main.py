@@ -3,6 +3,7 @@ from tkinter import ttk
 from datetime import date
 from tkinter import messagebox
 import tkinter.messagebox
+import sqlite3
 
 def add_contact():
     firstname = first_name_entry.get()
@@ -15,6 +16,14 @@ def add_contact():
 
     tkinter.messagebox.showinfo(title="Contact Status", message=fullname_added)
 
+    conn = sqlite3.connect('contacts.db')
+    table_create_query = '''CREATE TABLE IF NOT EXISTS Contacts 
+            (firstname TEXT, lastname TEXT, relation TEXT, date_of_birth DATE,
+            fiscal_status TEXT, ammount_owed TEXT, notes TEXT)
+            '''
+    conn.execute(table_create_query)
+
+    conn.close()
 
 window = tkinter.Tk()
 window.title("Contact List")
