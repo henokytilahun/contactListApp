@@ -9,8 +9,10 @@ def add_contact():
     firstname = first_name_entry.get()
     lastname = last_name_entry.get()
     relation = relation_combobox.get()
+    dob = age_entry.get()
     fiscal = reg_status_var.get()
     moneyamount = moneyamount_spinbox.get()
+    notes = notes_text.get("1.0", 'end-1c')
 
     fullname_added = firstname + " " + lastname  + " Added!"
 
@@ -23,6 +25,14 @@ def add_contact():
             '''
     conn.execute(table_create_query)
 
+    data_insert_query = '''INSERT INTO Contacts (firstname, lastname, relation,
+                        date_of_birth, fiscal_status, ammount_owed, notes) VALUES
+                        (?,?,?,?,?,?,?)'''
+    data_insert_tuple = (firstname, lastname, relation, dob, fiscal, moneyamount,
+                         notes)
+    cursor = conn.cursor()
+    cursor.execute(data_insert_query, data_insert_tuple)
+    conn.commit()
     conn.close()
 
 window = tkinter.Tk()
