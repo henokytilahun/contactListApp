@@ -132,11 +132,10 @@ This is an example of how to list things you need to use the software and how to
 
 Adding a contact.
 
-https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png
+[![Contact List Snapshot][product-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png)
 
 Where to find the contacts.
-
-https://github.com/henokytilahun/contactListApp/blob/main/images/program_database.png
+[![Contact List Snapshot][product-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_database.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
