@@ -196,7 +196,7 @@ Project Link: https://github.com/henokytilahun/contactListApp
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/henok-y-tilahun
 [product-screenshot]: images/program_image.png
-[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=nextdotjs&logoColor=white 
+[Python.com]: https://simpleicons.org/icons/python.svg 
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
