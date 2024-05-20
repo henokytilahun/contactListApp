@@ -191,6 +191,6 @@ Project Link: https://github.com/henokytilahun/contactListApp
 [linkedin-url]: www.linkedin.com/in/henok-y-tilahun
 [product-screenshot]: images/program_image.png
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
-[React-url]: https://python.org/
+[Next-url]: https://python.org/
 [Sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
 [Vue-url]: https://vuejs.org/
