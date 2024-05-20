@@ -88,6 +88,7 @@ A very simple program to help you improve relations with people around you. Take
 
 * [![Next][Python]][Next-url]
 * [![Vue][Sqlite]][Vue-url]
+* [![love][Love]][love-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,3 +188,5 @@ Project Link: https://github.com/henokytilahun/contactListApp
 [Next-url]: https://python.org/
 [Sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
 [Vue-url]: https://vuejs.org/
+[love]: https://forthebadge.com/images/featured/featured-built-with-love.svg
+[love-url]: https://forthebadge.com/
