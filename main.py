@@ -10,6 +10,7 @@ def add_contact():
     lastname = last_name_entry.get()
     relation = relation_combobox.get()
     dob = age_entry.get()
+    phone = number_entry.get()
     fiscal = reg_status_var.get()
     moneyamount = moneyamount_spinbox.get()
     notes = notes_text.get("1.0", 'end-1c')
@@ -21,14 +22,14 @@ def add_contact():
     conn = sqlite3.connect('contacts.db')
     table_create_query = '''CREATE TABLE IF NOT EXISTS Contacts 
             (firstname TEXT, lastname TEXT, relation TEXT, date_of_birth DATE,
-            fiscal_status TEXT, ammount_owed TEXT, notes TEXT)
+            phone_number TEXT, fiscal_status TEXT, ammount_owed TEXT, notes TEXT)
             '''
     conn.execute(table_create_query)
 
     data_insert_query = '''INSERT INTO Contacts (firstname, lastname, relation,
-                        date_of_birth, fiscal_status, ammount_owed, notes) VALUES
-                        (?,?,?,?,?,?,?)'''
-    data_insert_tuple = (firstname, lastname, relation, dob, fiscal, moneyamount,
+                        date_of_birth, phone_number, fiscal_status, ammount_owed, notes) VALUES
+                        (?,?,?,?,?,?,?,?)'''
+    data_insert_tuple = (firstname, lastname, relation, dob, phone, fiscal, moneyamount,
                          notes)
     cursor = conn.cursor()
     cursor.execute(data_insert_query, data_insert_tuple)
