@@ -50,6 +50,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#Key-features">Key Features</a><li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -79,6 +80,12 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+##  Key Features
+
+* Add Contacts
+* Detail how and why you owe the person money
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
