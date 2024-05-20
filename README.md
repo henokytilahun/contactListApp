@@ -29,10 +29,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h3 align="center">project_title</h3>
+<h3 align="center">Contact List Debt Repayment Helper</h3>
 
   <p align="center">
-    project_description
+    A simple contacts list to help you pay your friends back. This program is made with python and Sqlite for the database management.
     <br />
     <a href="https://github.com/henokytilahun/contactListApp"><strong>Explore the docs »</strong></a>
     <br />
@@ -175,9 +175,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - hyt.tilahun@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: https://github.com/henokytilahun/contactListApp
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
