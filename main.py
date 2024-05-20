@@ -66,6 +66,11 @@ age_entry = tkinter.Entry(user_info_frame)
 age_label.grid(row=2, column=0)
 age_entry.grid(row=3, column=0)
 
+number_label = tkinter.Label(user_info_frame, text="Phone Number")
+number_entry = tkinter.Entry(user_info_frame)
+number_label.grid(row=2, column=1)
+number_entry.grid(row=3, column=1)
+
 for widget in user_info_frame.winfo_children():
     widget.grid_configure(padx=10, pady=5)
 
