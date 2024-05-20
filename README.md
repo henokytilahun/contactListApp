@@ -72,7 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Contact List Snapshot][product-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png)
+[![Contact List Snapshot][product-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_basic.png)
 
 A very simple program to help you improve relations with people around you. Take the time to give back to the people who helped you in your time of need. This program can track the who and how information needed to pay your benefactors back.
 
@@ -132,10 +132,11 @@ This is an example of how to list things you need to use the software and how to
 
 Adding a contact.
 
-[![Contact List Snapshot][product-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png)
+https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png
 
 Where to find the contacts.
 
+https://github.com/henokytilahun/contactListApp/blob/main/images/program_database.png
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
