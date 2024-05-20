@@ -132,10 +132,10 @@ This is an example of how to list things you need to use the software and how to
 
 Adding a contact.
 
-[![Contactnapshot][productcreenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png)
+[![Adding Snapshot][adding-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png)
 
 Where to find the contacts.
-[![Contast Snapshot][prodeenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_database.png)
+[![Finding Snapshot][finding-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_database.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +179,9 @@ Project Link: https://github.com/henokytilahun/contactListApp
 [issues-url]: https://github.com/henokytilahun/contactListApp/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: www.linkedin.com/in/henok-y-tilahun
-[product-screenshot]: images/program_image.png
+[product-screenshot]: images/program_basic.png
+[adding-screenshot]: images/program_image.png
+[finding-screenshot]: images/program_database.png
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Next-url]: https://python.org/
 [Sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
