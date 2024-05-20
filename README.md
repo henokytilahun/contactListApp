@@ -135,6 +135,7 @@ Adding a contact.
 [![Adding Snapshot][adding-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_image.png)
 
 Where to find the contacts.
+
 [![Finding Snapshot][finding-screenshot]](https://github.com/henokytilahun/contactListApp/blob/main/images/program_database.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
