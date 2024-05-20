@@ -50,7 +50,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#Key-features">Key Features</a><li>
+        <li><a href="#Key-features">Key Features</a>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
