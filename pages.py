@@ -1,10 +1,5 @@
 import tkinter as tk
 
-root = tk.Tk()
-root.geometry('500x400')
-root.title('Pages Hub')
-
-
 def home_page():
     home_frame = tk.Frame(main_frame)
     lb = tk.Label(home_frame, text='Home Page\n\nPage:1', font=('Bold', 30))
@@ -53,6 +48,11 @@ def indicate(lb, page):
     lb.config(bg='#158aff')
     delete_pages()
     page()
+
+
+root = tk.Tk()
+root.geometry('500x400')
+root.title('Pages Hub')
 
 
 options_frame = tk.Frame(root, bg='#c3c3c3')
