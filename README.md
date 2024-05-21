@@ -134,6 +134,9 @@ Where to find the contacts.
 ## Roadmap
 
 - [X] Implement a Sqlite Database to store contact information
+- [ ] Multiple page implementation
+- [ ] Show current contacts on application
+  - [ ] Full name | Amount Owed | Notes | (Update Balance)
 - [ ] Update existing contacts
 - [ ] Remove a contact after debts are payed
     - [ ] Implement a pay-back tracking system
