@@ -82,7 +82,6 @@ A very simple program to help you improve relations with people around you. Take
 * Add Contacts
 * Detail how and why you owe the person money
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -142,7 +141,6 @@ Where to find the contacts.
 See the [open issues](https://github.com/henokytilahun/contactListApp/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 
