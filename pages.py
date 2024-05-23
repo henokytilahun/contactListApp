@@ -1,5 +1,7 @@
 import tkinter as tk
 
+
+#---------Pages-------------#
 def home_page():
     home_frame = tk.Frame(main_frame)
     lb = tk.Label(home_frame, text='Home Page\n\nPage:1', font=('Bold', 30))
@@ -29,9 +31,9 @@ def exit_page():
     lb = tk.Label(exit_frame, text='Exit Page\n\nPage:5', font=('Bold', 30))
     lb.pack()
     exit_frame.pack(pady=20)
+#---------Pages-------------#
 
-
-
+#---------Pages-------------#
 def hide_indicators():
     home_indicate.config(bg='#c3c3c3')
     add_indicate.config(bg='#c3c3c3')
@@ -48,7 +50,7 @@ def indicate(lb, page):
     lb.config(bg='#158aff')
     delete_pages()
     page()
-
+#---------Pages-------------#
 
 root = tk.Tk()
 root.geometry('500x400')
