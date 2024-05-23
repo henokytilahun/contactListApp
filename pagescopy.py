@@ -27,9 +27,15 @@ def add_contact():
             '''
     conn.execute(table_create_query)
 
-    data_insert_query = '''INSERT INTO Contacts (firstname, lastname, relation,
-                        date_of_birth, phone_number, fiscal_status, ammount_owed, notes) VALUES
-                        (?,?,?,?,?,?,?,?)'''
+    data_insert_query = '''INSERT INTO Contacts (
+                        firstname,
+                        lastname, 
+                        relation,
+                        date_of_birth, 
+                        phone_number, 
+                        fiscal_status, 
+                        ammount_owed, 
+                        notes) VALUES (?,?,?,?,?,?,?,?)'''
     data_insert_tuple = (firstname, lastname, relation, dob, phone, fiscal, moneyamount,
                          notes)
     cursor = conn.cursor()
@@ -37,13 +43,70 @@ def add_contact():
     conn.commit()
     conn.close()
 
+def fetch_contacts():
+    conn = sqlite3.connect('Contacts.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM Contacts')
+    contacts = cursor.fetchall()
+    conn.close()
+    return contacts
+
+def delete_contact(phone):
+    conn = sqlite3.connect('Contacts.db')
+    cursor = conn.cursor()
+    cursor.execute('DELETE FROM Contacts WHERE phone = ?', (phone,))
+    conn.commit()
+    conn.close()
+
+def update_contact(new_first, new_last, new_relation, new_dob,
+                   new_fiscal, new_moneyammount, new_notes, phone):
+    conn = sqlite3.connect('Contacts.db')
+    cursor = conn.cursor()
+    cursor.execute("UPDATE Contacts SET first = ?, last = ?, relation = ?, dob = ?, fiscal = ?, moneyamount = ? notes = ?", (new_first, new_last, new_relation, new_dob,
+                   new_fiscal, new_moneyammount, new_notes, phone))
+    conn.commit()
+    conn.close()
+
+def phone_exists(phone):
+    conn = sqlite3.connect('Contacts.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT COUNT(*) FROM Contacts WHERE phone = ?', (phone,))
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] > 0
+
+
 
 #---------Pages-------------#
 def home_page():
     home_frame = tk.Frame(main_frame)
-    lb = tk.Label(home_frame, text='Home Page\n\nPage:1', font=('Bold', 30))
-    lb.pack()
     home_frame.pack(pady=20)
+    contacts_label = tk.Label(home_frame, text='Contacts', font=('Bold', 30))
+    contacts_label.pack()    
+    tree = ttk.Treeview(home_frame, columns= ('First Name', 'Last Name', 'Owe Money', 'Amount'))
+    tree.column('#0', width=0, stretch=tk.NO)
+    tree.column('First Name', anchor=tk.CENTER, width=170)
+    tree.column('Last Name', anchor=tk.CENTER, width=170)
+    tree.column('Owe Money', anchor=tk.CENTER, width=170)
+    tree.column('Amount', anchor=tk.CENTER, width=170)
+
+    tree.heading('First Name', text='First Name')
+    tree.heading('Last Name', text='Last Name')
+    tree.heading('Owe Money', text='Owe Money')
+    tree.heading('Amount', text='Amount')
+
+    def add_to_treeview():
+        contacts = fetch_contacts()
+        tree.delete(*tree.get_children())
+        for contact in contacts:
+            tree.insert('', tk.END, values=contact)
+
+    
+    add_to_treeview()
+    tree.pack()
+    
+
+    
 
 def add_page():
     user_info_frame = tk.LabelFrame(main_frame, text="User Information")
@@ -155,7 +218,7 @@ def indicate(lb, page):
 #---------Pages-------------#
 
 root = tk.Tk()
-root.geometry('500x400')
+root.geometry('800x715')
 root.title('Pages Hub')
 #----------------------------------------------------------
 
@@ -199,16 +262,20 @@ exit_indicate = tk.Label(options_frame, text='', bg='#c3c3c3')
 exit_indicate.place(x=3,y=250, width=5,height=25)
 
 
+
+
+
+
 options_frame.pack(side=tk.LEFT)
 options_frame.pack_propagate(False)
-options_frame.configure(width=100,height=400)
+options_frame.configure(width=100,height=900)
 
 
 main_frame = tk.Frame(root, highlightbackground='black',
                       highlightthickness=1)
 main_frame.pack(side=tk.LEFT)
 main_frame.pack_propagate(False)
-main_frame.configure(width=500,height=400)
+main_frame.configure(width=800,height=900)
 
 
 
