@@ -50,7 +50,7 @@ def indicate(lb, page):
     lb.config(bg='#158aff')
     delete_pages()
     page()
-#---------Pages-------------#
+
 
 root = tk.Tk()
 root.geometry('500x400')
