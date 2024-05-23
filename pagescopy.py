@@ -46,7 +46,7 @@ def add_contact():
 def fetch_contacts():
     conn = sqlite3.connect('Contacts.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM Contacts')
+    cursor.execute('SELECT firstname, lastname, fiscal_status, ammount_owed FROM Contacts')
     contacts = cursor.fetchall()
     conn.close()
     return contacts
@@ -93,7 +93,7 @@ def home_page():
     tree.heading('First Name', text='First Name')
     tree.heading('Last Name', text='Last Name')
     tree.heading('Owe Money', text='Owe Money')
-    tree.heading('Amount', text='Amount')
+    tree.heading('Amount', text='Amount ($)')
 
     def add_to_treeview():
         contacts = fetch_contacts()
